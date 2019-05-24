@@ -3,7 +3,13 @@
   /**
    * Colour palette
    */
-  --c-primary: hsl(190, 100%, 40%);
+  --c-green: hsl(98, 57%, 57%);
+  --c-white: hsl(0, 0%, 100%);
+  --c-black: hsl(0, 0%, 0%);
+  --c-grey-dark: hsl(0, 0%, 44%);
+  --c-grey-light: hsl(0, 0%, 68%);
+  --c-blue: hsl(228, 68%, 36%);
+  --c-red: hsl(0, 100%, 50%);
 
   /**
    * Layout
@@ -13,14 +19,14 @@
   /**
    * Typography
    */
-  --t-primary: Arial, Helvetica, sans-serif;
+  --t-primary: 'Gill Sans', sans-serif;
   --t-secondary: Arial, Helvetica, sans-serif;
   --t-tertiary: monospace;
 
   --t-headline: var(--t-primary);
   --t-subtitle: var(--t-primary);
-  --t-body: var(--t-secondary);
-  --t-code: var(--t-tertiary);
+  --t-body: var(--t-primary);
+  --t-code: var(--t-primary);
 }
 
 

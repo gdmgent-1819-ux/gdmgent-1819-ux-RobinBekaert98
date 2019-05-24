@@ -1,9 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 html {
   height: 100%;
 }
 
 body {
-  font-family: var(--t-body);
+  font-family: var(--t-primary);
   height: inherit;
   margin: 0;
+}
+
+.navbar{
+  background: var(--c-green);
+}
+
+.navbar div{
+  display: none;
+}
+
+.navbar .toggle,
+.navbar .logo{
+  display: inline-block;
+}
+
+.navbar .navLink{
+  display: block;
+  justify-content: flex-start;
+  font-size: 25px;
+  padding: .5em 0 .5em 1em;
+  text-decoration: none;
+  color: var(--c-white);
+}
+
+.navbar .navSmall .navLink{
+  font-size: 20px;
+  padding: .5em 0 .5em 1.4em;
+}
+
+.navbar .logo{
+  font-size: 25px;
+  font-weight: bold;
+  padding: .5em 1em .5em 1em;
+  color: var(--c-white);
+  text-decoration: none;
+}
+
+.navbar a{
+  text-decoration: none;
+}
+
+.navbar .toggle{
+  padding: .5em 1em .5em 1em;
+  color: var(--c-white);
+  font-size: 2.5em;
+  justify-content: flex-end;
+}
+
+@media (min-width: 992px){
+  .navbar{
+    display: flex;
+  }
+
+  .navbar div{
+    display: flex;
+  }
+
+  .navbar .navBig{
+    display: flex;
+    flex: 1;
+  }
+
+  .navbar .navLink{
+    width: auto;
+  }
+
+  .navbar .toggle{
+    display: none;
+  }
+}
+
+@media (max-width: 992px){
+  .navbar.active .toggle{
+    background: var(--c-green);
+    color: var(--c-white);
+  }
+
+  .navbar.active div{
+    display: block;
+  }
 }
