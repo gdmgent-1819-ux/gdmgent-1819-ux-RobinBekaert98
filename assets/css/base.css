@@ -1,6 +1,7 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -13,82 +14,578 @@ body {
   margin: 0;
 }
 
-.navbar{
-  background: var(--c-green);
+/*-- Header --*/
+
+.header-image img {
+  width: 100%;
+  height: 50vh;
 }
 
-.navbar div{
+/*-- Header-navigation --*/
+
+nav {
+  display: flex;
+  align-items: flex-end;
+  min-height: 8vh;
+  background-image: linear-gradient(hsla(98, 57%, 47%, .5), hsla(98, 57%, 24%, .5));
+  position: absolute;
+  width: 100%;
+}
+
+.logo {
+  padding: .5em 5em .5em 5em;
+  position: absolute;
+  z-index: 1;
+}
+
+.logo a {
+  color: var(--c-white);
+  text-decoration: none;
+  font-size: 33px;
+  font-weight: bold;
+  justify-content: flex-start;
+}
+
+nav {
+  padding-left: 15em;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  padding-bottom: .5em;
+}
+
+.nav-links li {
+  list-style-type: none;
+  margin-left: 3em;
+}
+
+.nav-links li a {
+  color: var(--c-white);
+  text-decoration: none;
+  font-size: 32px;
+}
+
+.nav-links li a:hover {
+  border-bottom: 2px solid var(--c-white);
+}
+
+nav ul li.parent ul.child {
   display: none;
 }
 
-.navbar .toggle,
-.navbar .logo{
-  display: inline-block;
-}
-
-.navbar .navLink{
+nav ul li.parent:hover ul.child {
   display: block;
-  justify-content: flex-start;
-  font-size: 25px;
-  padding: .5em 0 .5em 1em;
-  text-decoration: none;
-  color: var(--c-white);
+  position: absolute;
+  background-image: linear-gradient(hsla(98, 57%, 47%), hsla(98, 57%, 24%));
 }
 
-.navbar .navSmall .navLink{
+nav ul li.parent ul.child li {
+  width: 10em;
+  padding: .5em;
+}
+
+.nav-small {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  padding-bottom: 3em;
+}
+
+.nav-small li {
+  list-style-type: none;
+}
+
+.nav-small li a {
+  text-decoration: none;
   font-size: 20px;
-  padding: .5em 0 .5em 1.4em;
-}
-
-.navbar .logo{
-  font-size: 25px;
-  font-weight: bold;
-  padding: .5em 1em .5em 1em;
   color: var(--c-white);
-  text-decoration: none;
 }
 
-.navbar a{
-  text-decoration: none;
+.nav-small li.parent:hover ul.child-small {
+  width: 3%;
 }
 
-.navbar .toggle{
-  padding: .5em 1em .5em 1em;
-  color: var(--c-white);
+.nav-small li.parent:hover ul.child-small li a img {
+  width: 32px;
+}
+
+.burger {
+  display: none;
+}
+
+.burger i {
   font-size: 2.5em;
-  justify-content: flex-end;
+  color: var(--c-white);
+  padding: .5em 0em .7em 1em;
+  cursor: pointer;
 }
 
-@media (min-width: 992px){
-  .navbar{
+/*-- Header-bookingbar --*/
+.booking-bar {
+  position: absolute;
+  width: 60%;
+  margin-left: 20%;
+  z-index: 1;
+  top: 46.5vh;
+}
+
+.input-booking {
+  height: 60px;
+  width: 25%;
+  font-size: 20px;
+}
+
+.input-booking::-webkit-input-placeholder {
+  color: var(--c-black);
+  padding-left: 20px;
+}
+
+.input-left {
+  border-radius: 5px 0 0 5px;
+}
+
+button {
+  background-color: var(--c-green);
+  color: var(--c-white);
+}
+
+.btn-search {
+  height: 60px;
+  width: 23%;
+  font-size: 25px;
+  border-radius: 0 5px 5px 0;
+}
+
+.booking-smartphone{
+  display: none;
+}
+
+/*-- Main --*/
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 8vh;
+}
+
+/*-- Section-aanbiedingen --*/
+.aanbiedingen-box {
+  display: flex;
+  width: 80%;
+  border: 1px solid var(--c-grey-dark);
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 10%;
+}
+
+.aanbiedingen-img {
+  background-image: url('../images/aanbiedingen.png');
+  width: 70%;
+  height: 330px
+}
+
+.aanbiedingen-textbox {
+  display: flex;
+  flex-direction: column;
+  margin-left: 6%;
+  margin-top: 3%;
+}
+
+.aanbiedingen-text {
+  font-size: 32px;
+  color: var(--c-black);
+  padding-left: 7%;
+  padding-top: 5%;
+}
+
+.discount {
+  color: var(--c-green);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.btn-more {
+  font-size: 25px;
+  border: 2px solid var(--c-grey-dark);
+  border-radius: 50px;
+  padding: .5em 1.5em;
+  margin-top: 25%;
+  margin-left: 10%;
+}
+
+/*-- Section-accomodaties --*/
+.accomodaties {
+  background-color: var(--c-green-opacity-light);
+  padding-bottom: 4%;
+}
+
+.accomodaties h1 {
+  padding-top: 2%;
+}
+
+.cards {
+  display: flex;
+  width: 80%;
+  margin-left: 10%;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+}
+
+.card-title {
+  font-size: 32px;
+  color: var(--c-black);
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.card-content {
+  border: 1px solid var(--c-grey-dark);
+  border-radius: 5px;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  max-height: 265px;
+}
+
+.card-bottom {
+  background-color: var(--c-white);
+}
+
+.btn-card {
+  font-size: 25px;
+  border: 2px solid var(--c-grey-dark);
+  border-radius: 50px;
+  padding: .5em 1.5em;
+  margin: 3% 0 3% 35%;
+}
+
+/*-- Section-activiteiten --*/
+.activiteiten {
+  width: 100%;
+}
+
+.activiteiten  h1.section-title {
+  display: none;
+}
+
+.activiteiten-img {
+  width: 100%;
+}
+
+.activiteiten-title {
+  font-size: 70px;
+  color: var(--c-white);
+  text-shadow: -1px 0 var(--c-grey-dark), 0 1px var(--c-grey-dark), 1px 0 var(--c-grey-dark), 0 -1px var(--c-grey-dark);
+  position: absolute;
+  margin-left: 38%;
+  margin-top: 5%;
+}
+
+.btn-activiteiten {
+  font-size: 32px;
+  border-radius: 50px;
+  padding: .5em 1.5em;
+  border: 2px solid var(--c-grey-dark);
+  position: absolute;
+  margin-left: 47%;
+  margin-top: 14%;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  color: var(--c-white);
+  font-size: 50px;
+  position: absolute;
+  margin-top: 15%;
+}
+
+.fa-chevron-left {
+  margin-left: 2%;
+}
+
+.fa-chevron-right {
+  margin-left: 96%;
+}
+
+.circles {
+  display: flex;
+  justify-content: space-between;
+  width: 9%;
+  position: absolute;
+  margin-left: 47.5%;
+  margin-top: 25%;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--c-grey-dark);
+  border-radius: 100%;
+}
+
+.circle-grey {
+  background-color: var(--c-grey-light);
+}
+
+.circle-white {
+  background-color: var(--c-white);
+}
+
+/*-- Footer --*/
+footer {
+  background-color: var(--c-green-opacity-light);
+  padding-bottom: 2%;
+}
+
+.newsletter {
+  margin-left: 10%;
+  padding-top: 2%;
+}
+
+.newsletter-text {
+  font-size: 30px;
+}
+
+.newsletter-input {
+  width: 19%;
+  margin-top: 1%;
+  height: 33px;
+}
+
+.newsletter-input::-webkit-input-placeholder {
+  font-size: 20px;
+  padding: 1em;
+}
+
+.btn-send {
+  font-size: 25px;
+  padding: .5em 1.5em;
+  border: 2px solid var(--c-grey-dark);
+  border-radius: 50px;
+  margin-top: 1%;
+}
+
+.socials {
+  margin-left: 47%;
+}
+
+.contact-img {
+  display: flex;
+  flex-direction: column;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  margin-left: 70%;
+  margin-top: 3%;
+}
+
+.contact-text {
+  font-size: 20px;
+  margin-left: 73%;
+  width: 20%;
+  position: absolute;
+  margin-top: 3.5%;
+}
+
+.contact-text p{
+  margin-bottom: 8%;
+}
+
+/*-- Smartphone --*/
+@media screen and (max-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /*-- Header --*/
+  /*-- Navigation --*/
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 70vh;
+    top: 9.6vh;
+    background-image: linear-gradient(hsla(98, 57%, 47%), hsla(98, 57%, 24%));
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+    z-index: 2;
   }
 
-  .navbar div{
-    display: flex;
+  .nav-links li {
+    opacity: 0;
   }
 
-  .navbar .navBig{
-    display: flex;
-    flex: 1;
+  .burger {
+    display: block;
   }
 
-  .navbar .navLink{
-    width: auto;
-  }
-
-  .navbar .toggle{
+  /*-- Booking --*/
+  .booking-bar {
     display: none;
   }
-}
 
-@media (max-width: 992px){
-  .navbar.active .toggle{
-    background: var(--c-green);
-    color: var(--c-white);
+  .booking-smartphone {
+    display: block;
+    background-color: var(--c-green-opacity-dark);
+    width: 90%;
+    height: 30%;
+    margin-left: 5%;
+    margin-top: 20%;
+    position: absolute;
+    padding-top: 3%;
+    padding-left: 3%; 
+    border: 1px solid var(--c-grey-dark);
+    border-radius: 5px;
   }
 
-  .navbar.active div{
+  .booking-smartphone input {
+    height: 36px;
+    width: 40%;
+    font-size: 20px;
+    color: var(--c-black);
+    border: 1px solid var(--c-grey-dark);
+    border-radius: 5px;
+    margin-right: 5%;
+  }
+
+  .booking-smartphone input::-webkit-input-placeholder {
+    color: var(--c-black);
+    padding: 4%;
+  }
+
+  .input-bottom {
+    margin-top: 8%;
+  }
+
+  .btn-search-smartphone {
+    font-size: 25px;
+    color: var(--c-white);
+    border: 2px solid var(--c-grey-dark);
+    border-radius: 50px;
+    padding: .4em 1em;
+    margin-top: 5%;
+    margin-left: 40%;
+  }
+
+  /*-- Main --*/
+  /*-- Section-aanbiedingen --*/
+  .section-title {
+    margin-top: 2%;
+    font-size: 25px;
+  }
+
+  .aanbiedingen-box {
+    width: 100%;
+    margin-left: 0;
+    height: 150px;
+  }
+
+  .aanbiedingen-img {
+    height: 150px;
+  }
+
+  .aanbiedingen-text {
+    font-size: 18px;
+  }
+
+  .discount {
+    font-size: 20px;
+  }
+
+  .btn-more {
+    font-size: 14px;
+  }
+
+  /*-- Section-accomodaties --*/
+  .accomodaties {
+    background-color: var(--c-white);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .card-title {
+    display: none;
+  }
+
+  .card{
+    width: 100%;
+    height: 150px;
+    display: flex;
+  }
+
+  .card-content {
+    height: 150px;
+  }
+
+  .card-img {
+    max-height: 150px;
+    width: 10%;
+  }
+
+  .card-bottom{
+    float: right;
+    margin-top: 0;
+  }
+
+  .btn-card {
+    font-size: 14px;
+  }
+
+  /*-- Section-activiteiten --*/
+  .activiteiten h1.section-title {
     display: block;
+    margin-top: 30%;
+  }
+
+  .activiteiten-title {
+    font-size: 25px;
+  }
+
+  /*-- Footer  --*/
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-img, 
+  .contact-text,
+  .newsletter,
+  .socials {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }

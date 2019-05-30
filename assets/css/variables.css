@@ -3,7 +3,11 @@
   /**
    * Colour palette
    */
-  --c-green: hsl(98, 57%, 57%);
+  --c-green: hsl(98, 57%, 47%);
+  --c-green-opacity: hsla(98, 57%, 47%, .5);
+  --c-green-opacity-light: hsla(98, 57%, 47%, .1);
+  --c-green-opacity-dark: hsla(98, 57%, 47%, .8);
+  --c-green-dark: hsla(98, 57%, 24%);
   --c-white: hsl(0, 0%, 100%);
   --c-black: hsl(0, 0%, 0%);
   --c-grey-dark: hsl(0, 0%, 44%);
@@ -20,8 +24,6 @@
    * Typography
    */
   --t-primary: 'Gill Sans', sans-serif;
-  --t-secondary: Arial, Helvetica, sans-serif;
-  --t-tertiary: monospace;
 
   --t-headline: var(--t-primary);
   --t-subtitle: var(--t-primary);

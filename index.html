@@ -1,39 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eindopdracht UX</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <div class="navbar">
-            <a href="#" class="logo">Party<br>Velde</a>
+        <div class="logo">
+            <a href="#">Party<br>Velde</a>
+        </div>
 
-            <div class="navBig">
-                <a href="#" class="navLink">Accomodaties</a>
-                <a href="#" class="navLink">Activiteiten</a>
-                <a href="#" class="navLink">Aanbiedingen</a>
-                <a href="#" class="navLink">Contact</a>
-            </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="parent"><a href="#">Accomodaties</a>
+                    <ul class="child">
+                        <li><a href="#">Camping</a></li>
+                        <li><a href="#">Bungalow</a></li>
+                        <li><a href="#">Bungalow+</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Activiteiten</a></li>
+                <li><a href="#">Aanbiedingen</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
 
-            <div class="navSmall">
-                <a href="#" class="navLink">Faq</a>
-                <a href="#" class="navLink">Login</a>
-                <a href="#" class="navLink"><img src="assets/images/icons/nl.png"></a>
-            </div>
+            <ul class="nav-small">
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Login</a></li>
+                <li class="parent"><a href="#"><img src="assets/images/icons/nl.png" class="img-language"></a>
+                    <ul class="child child-small">
+                        <li><a href="#"><img src="assets/images/icons/en.png" class="img-language"></a></li>
+                        <li><a href="#"><img src="assets/images/icons/fr.png" class="img-language"></a></li>
+                    </ul>
+                </li>
+            </ul>
 
-            <a href="#" class="toggle" id="navHamburger">
+            <div class="burger">
                 <i class="fas fa-bars"></i>
-            </a>
+            </div>
+        </nav>
+
+        <div class="booking-bar">
+            <form>
+                <input placeholder="Aankomstdatum" class="textbox-n input-booking input-left" type="text"
+                    onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+                <input placeholder="Vertrekdatum" class="textbox-n input-booking" type="text"
+                    onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+                <input type="number" placeholder="Aantal personen" class="input-booking">
+                <button type="submit" class="btn-search">Zoek</button>
+            </form>
+        </div>
+
+        <div class="booking-smartphone">
+            <input placeholder="Aankomst" class="textbox-n" type="text" onfocus="(this.type='date')"
+                onblur="(this.type='text')" id="date">
+            <input placeholder="Vertrek" class="textbox-n" type="text" onfocus="(this.type='date')"
+                onblur="(this.type='text')" id="date">
+            <input type="number" placeholder="Aantal personen" class="input-booking input-bottom">
+            <div>
+                <button type="submit" class="btn-search-smartphone">Zoek</button>
+            </div>
+        </div>
+
+        <div class="header-image">
+            <img src="assets/images/background.jpg" alt="achtergond-header">
         </div>
     </header>
 
+    <main>
+        <section class="aanbiedingen">
+            <h1 class="section-title">Aanbiedingen</h1>
+
+            <div class="aanbiedingen-box">
+                <div class="aanbiedingen-img"></div>
+                <div class="aanbiedingen-textbox">
+                    <div class="aanbiedingen-text">
+                        Last minutes tot<br>
+                        <span class="discount">-50%</span>
+                    </div>
+                    <div class="aanbiedingen-btn">
+                        <button type="button" class="btn-more">Meer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="accomodaties">
+            <h1 class="section-title">Accomodaties</h1>
+
+            <div class="cards">
+                <div class="card">
+                    <p class="card-title">Camping</p>
+                    <div class="card-content">
+                        <img src="assets/images/camping.jpg" alt="camping" class="card-img">
+                        <div class="card-bottom">
+                            <button type="button" class="btn-card">Meer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="card-title">Bungalow</p>
+                    <div class="card-content">
+                        <img src="assets/images/bungalow.jpg" alt="bungalow" class="card-img">
+                        <div class="card-bottom">
+                            <button type="button" class="btn-card">Meer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="card-title">Bungalow+</p>
+                    <div class="card-content">
+                        <img src="assets/images/bungalow-plus.jpg" alt="bungalow-plus" class="card-img">
+                        <div class="card-bottom">
+                            <button type="button" class="btn-card">Meer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="activiteiten">
+            <h1 class="section-title">Accomodaties</h1>
+            
+            <h1 class="activiteiten-title">Quadtochten</h1>
+
+            <button type="button" class="btn-activiteiten">Meer</button>
+
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+
+            <div class="circles">
+                <div class="circle circle-grey"></div>
+                <div class="circle circle-white"></div>
+                <div class="circle circle-white"></div>
+                <div class="circle circle-white"></div>
+            </div>
+
+
+            <div class="activiteiten-img">
+                <img src="assets/images/quad.png" alt="quad">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-img">
+            <img src="assets/images/icons/location.png" alt="location">
+            <img src="assets/images/icons/telephone.png" alt="telephone">
+            <img src="assets/images/icons/mail.png" alt="mail">
+        </div>
+
+        <div class="contact-text">
+            <p>Rue du Rond-Thier 13, 4960 Malmedy</p>
+            <p>+32 084 13 68 77</p>
+            <p>partyvelde@gmail.com</p>
+        </div>
+
+        <div class="newsletter">
+            <p class="newsletter-text">Wekelijkse nieuwsbrief</p>
+            <input type="text" placeholder="E-mail" class="newsletter-input">
+            <div>
+                <button type="submit" class="btn-send">Verzenden</button>
+            </div>
+        </div>
+
+        <div class="socials">
+            <img src="assets/images/icons/facebook.png" alt="facebook">
+            <img src="assets/images/icons/twitter.png" alt="twitter">
+            <img src="assets/images/icons/instagram.png" alt="instagram">
+        </div>
+    </footer>
 
     <script src="assets/scripts/app.js"></script>
 </body>
+
 </html>

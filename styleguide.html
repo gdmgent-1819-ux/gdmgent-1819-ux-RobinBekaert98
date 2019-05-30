@@ -1,21 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Styleguide</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/styleguide.css">
+    
 </head>
+
 <body>
-<div class="container">
-    <h1 class="sg-title">Digital styleguide</h1>
-    <h2 class="sg-subtitle">Kleuren</h2>
-    <h2 class="sg-subtitle">Typografie</h2>
-    <h2 class="sg-subtitle">Knopppen</h2>
-    <h2 class="sg-subtitle">Formulier</h2>
-    <h2 class="sg-subtitle">Componenten</h2>
-</div>
+    <div class="container">
+        <h1 class="sg-title">Digital styleguide</h1>
+
+        <h2 class="sg-subtitle">Kleuren</h2>
+        <div>
+            <p class="color-white">hsl(0, 0%, 100%)</p>
+            <p class="color-black">hsl(0, 0%, 0%)</p>
+            <p class="color-grey-dark">hsl(0, 0%, 44%)</p>
+            <p class="color-grey-light">hsl(0, 0%, 68%)</p>
+            <p class="color-green">hsl(98, 57%, 47%)</p>
+            <p class="color-blue">hsl(228, 68%, 36%)</p>
+            <p class="color-red">hsl(0, 100%, 50%)</p>
+        </div>
+
+        <h2 class="sg-subtitle">Typografie</h2>
+        <h3 class="desktop">Desktop:</h3>
+        <div>
+            <p class="bold-70">Gill Sans - Bold 70px</p>
+            <p class="bold-60">Gill Sans - Bold 60px</p>
+            <p class="bold-40">Gill Sans - Bold 40px</p>
+            <p class="bold-33">Gill Sans - Bold 33px</p>
+            <p class="regular-32">Gill Sans - Regular 32px</p>
+            <p class="regular-25">Gill Sans - Regular 25px</p>
+            <p class="regular-20">Gill Sans - Regular 20px</p>
+        </div>
+
+        <h3 class="smartphone">Smartphone:</h3>
+        <div>
+            <p class="bold-25">Gill Sans - Bold 25px</p>
+            <p class="bold-20">Gill Sans - Bold 20px</p>
+            <p class="bold-18">Gill Sans - Bold 18px</p>
+            <p class="bold-16">Gill Sans - Bold 16px</p>
+            <p class="semibold-25">Gill Sans - Semibold 25px</p>
+            <p class="regular-20">Gill Sans - Regular 20px</p>
+            <p class="regular-18">Gill Sans - Regular 18px</p>
+            <p class="regular-16">Gill Sans - Regular 16px</p>
+            <p class="regular-14">Gill Sans - Regular 14px</p>
+        </div>
+
+        <h2 class="sg-subtitle">Knopppen</h2>
+        <div>
+            <button class="btn-search">Zoek</button>
+        </div>
+        <div>
+            <button class="btn-more">Meer</button>
+        </div>
+        <div>
+            <button class="btn-activiteiten">Meer</button>
+        </div>
+        <div>
+            <button class="btn-send">Verzenden</button>
+        </div>
+        <div>
+            <button class="btn-select">
+                <i class="fas fa-shopping-cart"></i>Selecteer
+            </button>
+        </div>
+
+        <h2 class="sg-subtitle">Formulier</h2>
+        <div>
+            <input placeholder="Aankomstdatum" class="textbox-n input-booking input-left" type="text"
+                onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+        </div>
+        <div>
+            <input placeholder="Vertrekdatum" class="textbox-n input-booking" type="text" onfocus="(this.type='date')"
+                onblur="(this.type='text')" id="date">
+        </div>
+        <div>
+            <input type="number" placeholder="Aantal personen" class="input-booking">
+        </div>
+        <div>
+            <input type="text" placeholder="E-mail" class="newsletter-input">    
+        </div>
+
+        <h2 class="sg-subtitle">Componenten</h2>
+        <div>
+            <div>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div>
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

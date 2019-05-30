@@ -3,7 +3,7 @@
     font-weight: 400;
     color: #333;
     margin: 1rem 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .sg-subtitle {
@@ -13,5 +13,184 @@
     color: #666;
     text-transform: uppercase;
     margin: 2rem 0 .5rem 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.desktop,
+.smartphone {
+    font-weight: 300;
+    font-family: var(--t-primary);
+    text-transform: uppercase;
+}
+
+.smartphone {
+    margin-top: 2em;
+}
+
+p {
+    font-family: var(--t-primary);
+}
+
+/*-- Kleuren --*/
+.color-white {
+    background-color: var(--c-black);
+    color: var(--c-white);
+}
+
+.color-black {
+    color: var(--c-black);
+}
+
+.color-grey-dark {
+    color: var(--c-grey-dark);
+}
+
+.color-grey-light {
+    color: var(--c-grey-light);
+}
+
+.color-green {
+    color: var(--c-green);
+}
+
+.color-blue {
+    color: var(--c-blue);
+}
+
+.color-red {
+    color: var(--c-red);
+}
+
+/*-- Typografie --*/
+/*-- Typografie-desktop --*/
+.bold-70 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.bold-60 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.bold-40 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.bold-33 {
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.regular-32 {
+    font-size: 32px;
+}
+
+.regular-25 {
+    font-size: 25px;
+}
+
+.regular-20 {
+    font-size: 20px;
+}
+
+/*-- Typografie-smartphone --*/
+.bold-25 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.bold-20 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bold-18 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bold-16 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.semibold-25 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.regular-18 {
+    font-size: 18px;
+}
+
+.regular-16 {
+    font-size: 16px;
+}
+
+.regular-14 {
+    font-size: 14px;
+}
+
+/*-- Knoppen --*/
+button {
+    background-color: var(--c-green);
+    color: var(--c-white);
+}
+
+.btn-search {
+    height: 60px;
+    font-size: 25px;
+    border-radius: 0 5px 5px 0;
+}
+
+.btn-more {
+    font-size: 25px;
+    border: 2px solid var(--c-grey-dark);
+    border-radius: 50px;
+    padding: .5em 1.5em;
+    margin: .5em 0 0 0;
+}
+
+.btn-activiteiten {
+    font-size: 32px;
+    border-radius: 50px;
+    padding: .5em 1.5em;
+    border: 2px solid var(--c-grey-dark);
+    margin: .5em 0 0 0;
+    position: relative;
+}
+
+.btn-send {
+    font-size: 25px;
+    padding: .5em 1.5em;
+    border: 2px solid var(--c-grey-dark);
+    border-radius: 50px;
+    margin: .5em 0 0 0;
+}
+
+.btn-select {
+    background-color: var(--c-blue);
+    padding: .5em 1.5em;
+    border-radius: 50px;
+    margin: .5em 0 0 0;
+}
+
+/*-- Formulieren --*/
+.input-booking {
+    margin-top: .5em;
+    font-size: 25px;
+}
+
+/*-- Componenten --*/
+.fa-chevron-down {
+    font-size: 50px;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    color: var(--c-black);
+    position: relative;
+    margin: .5em 0 0 0;
 }
